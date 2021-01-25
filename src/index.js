@@ -4,24 +4,14 @@ import React from 'react';
 
 const defaultSupportedLanguages = require ('./supported-languages.json');
 
-class LanguageOption extends React.Component {
-    render() {return (<option value={this.props.code}>{this.props.name}</option>);}
-}
-
 export default class LanguageSelector extends React.Component {
     render() {
-        let langoptionsrepresentation = [];
         let supportedLanguages = (this.props.supportedLanguages) ? this.props.supportedLanguages : defaultSupportedLanguages;
-        for (let i = 0; i < supportedLanguages.length; i++) {
-            langoptionsrepresentation.push(<LanguageOption code={supportedLanguages[i].code} name={supportedLanguages[i].name} />)
-        }
-        return (
-        <div>
-            <label htmlFor="lang">{this.props.text_language}</label>
-                  <select id="lang" name="lang" lang="en" value={this.props.language} onChange={this.props.handleSettingsChange}>
-                    {langoptionsrepresentation}
-                  </select>
-        </div>
-        );
+        let returnV  = React.createElement('div', null,
+                            React.createElement('label', {htmlFor: "LanguageSelector"}, this.props.text_language),
+                            React.createElement('select', {id: "LanguageSelector", name: "lang", lang: "en", value: this.props.language, onChange: this.props.handleSettingsChange},
+                                supportedLanguages.map((langdesc) => {return React.createElement('option',{value: langdesc.code},langdesc.name)})));
+    console.log(returnV);
+    return returnV;
     }
 }
