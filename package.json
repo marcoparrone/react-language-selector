@@ -1,6 +1,6 @@
 {
   "name": "@marcoparrone/react-language-selector",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Language selector react component.",
   "main": "src/index.js",
   "scripts": {

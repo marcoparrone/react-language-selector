@@ -7,11 +7,15 @@ Language selector react component.
 npm install @marcoparrone/react-language-selector
 ```
 
-## Webpack Usage
+## Usage
+
+After the installation, to import the module:
 
 ```js
 import LanguageSelector from '@marcoparrone/react-language-selector';
 ```
+
+Read further for more information.
 
 ## Using the language selector react component:
 
