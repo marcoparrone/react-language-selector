@@ -22,10 +22,10 @@ Read further for more information.
 Example usage:
 
 ```jsx
-<LanguageSelector text_language={this.state.text_language} language={this.state.language} handleSettingsChange={this.handleSettingsChange} />
+<LanguageSelector text_language={this.state.text['text_language']} language={this.state.language} handleSettingsChange={this.handleSettingsChange} />
 ```
 
-where: this.state.text_language contains "Choose language:", this.state.language contains "en", handleSettingsChange is the method which will manage the change of the setting, for example:
+where: this.state.text['text_language'] contains "Choose language:", this.state.language contains "en", handleSettingsChange is the method which will manage the change of the setting, for example:
 
 ```js
   handleSettingsChange(e) {
